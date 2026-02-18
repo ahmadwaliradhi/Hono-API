@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model toDo {
+  id      Int    @id @default(autoincrement())
+  title   String
+  content String
+  completed Boolean
+}
